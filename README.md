@@ -8,7 +8,7 @@ Installation
 
 1. Add `pod 'LMReport'` to your Podfile.
 2. Run `pod install` or `pod update`.
-3. Import \<YYModel/LMReport.h\>.
+3. Import \<LMReport/LMReport.h\>.
 
 
 Feature
