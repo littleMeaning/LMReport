@@ -167,7 +167,7 @@ typedef NS_ENUM(NSUInteger, LMRPart) {
     while (row < _numberOfHeadRows) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForCol:0 inRow:row];
         LMRGrid *grid = [_datasource reportView:self gridAtIndexPath:indexPath];
-        if (!grid) {
+        if ([grid isKindOfClass:[NSNull class]]) {
             row ++;
             continue;
         }
@@ -220,7 +220,7 @@ typedef NS_ENUM(NSUInteger, LMRPart) {
         while (col < _numberOfCols) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForCol:col inRow:row];
             LMRGrid *grid = [_datasource reportView:self gridAtIndexPath:indexPath];
-            if (!grid) {
+            if ([grid isKindOfClass:[NSNull class]]) {
                 rect.origin.x += (_datasourceFlags.widthOfCol ? [_datasource reportView:self widthOfCol:col] : _style.widthOfCol) + _style.spacing;
                 col ++;
                 continue;
@@ -279,7 +279,7 @@ typedef NS_ENUM(NSUInteger, LMRPart) {
     while (row < _numberOfRows) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForCol:0 inRow:row];
         LMRGrid *grid = [_datasource reportView:self gridAtIndexPath:indexPath];
-        if (!grid) {
+        if ([grid isKindOfClass:[NSNull class]]) {
             rect.origin.x +=  _style.widthOfCol + _style.spacing;
             row ++;
             continue;
@@ -334,7 +334,7 @@ typedef NS_ENUM(NSUInteger, LMRPart) {
         while (col < _numberOfCols) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForCol:col inRow:row];
             LMRGrid *grid = [_datasource reportView:self gridAtIndexPath:indexPath];
-            if (!grid) {
+            if ([grid isKindOfClass:[NSNull class]]) {
                 rect.origin.x += (_datasourceFlags.widthOfCol ? [_datasource reportView:self widthOfCol:col] : _style.widthOfCol) + _style.spacing;
                 col ++;
                 continue;

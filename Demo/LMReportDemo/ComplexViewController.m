@@ -55,19 +55,19 @@
         while (colIndex < 10) {
             LMRGrid *grid = [[LMRGrid alloc] init];
             grid.text = [NSString stringWithFormat:@"%ld-%ld", rowIndex, colIndex];
-            if (rowIndex == 0 && colIndex == 0) {
+            if (rowIndex == 0 && (colIndex == 0 || colIndex == 1)) {
                 grid.rowspan = 2;
             }
-            else if (rowIndex == 1 && colIndex == 0) {
+            else if (rowIndex == 1 && (colIndex == 0 || colIndex == 1)) {
                 [grids addObject:[NSNull null]];
                 colIndex++;
                 continue;
             }
             if (rowIndex == 0) {
                 switch (colIndex) {
-                    case 1:
-                        grid.colspan = 2;
-                        break;
+//                    case 1:
+//                        grid.colspan = 2;
+//                        break;
                     case 3:
                         grid.colspan = 3;
                         break;
