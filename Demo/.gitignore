@@ -1,6 +1,11 @@
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
 ## Build generated
 build/
-DerivedData/
+DerivedData
+infer-out/
 
 ## Various settings
 *.pbxuser
@@ -11,15 +16,49 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata/
+xcuserdata
+fastlane/
 
 ## Other
+*.DS_Store
+*.xccheckout
 *.moved-aside
 *.xcuserstate
+*.xcscmblueprint
 
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
 
 # CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
 Pods/
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build
+
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# fastlane specific
+ZM_Seller/fastlane/report.xml
+
+# deliver temporary files
+ZM_Seller/fastlane/Preview.html
+
+# snapshot generated screenshots
+ZM_Seller/fastlane/screenshots
+
+# scan temporary files
+fastlane/test_output
